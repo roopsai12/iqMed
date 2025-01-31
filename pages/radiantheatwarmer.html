@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermal Management</title>
+<link rel="stylesheet" href="../css/prod-selection.css">
+</head>
+
+<body>
+<!-- Preloader -->
+<div id="preloader">
+    <div class="spinner"></div>
+</div>
+    <div data-include="../components/header.html"></div>
+    <section class="header_section_menu_outer" id="header_01x">
+      <div class="nav_header_section_menu_outer" style="background-color: rgb(77, 121, 109, 1);padding-top: 0.7rem;padding-bottom: 0.7rem;" >
+          <nav class="nav_section">
+              <ul class="nav-list_section">
+                  <li><a href="../pages/products.html" class="active">Products</a></li>
+                  <li><a href="../pages/thermalmanagement.html">Thermal Management</a></li>
+                  <li><a>Radiant Heat Warmer</a></li>
+              </ul>
+          </nav>
+      </div>    
+  </section>
+
+  <section id="thermal-management" class="dynamic-section">
+    <div class="content-wrapper">
+      <div class="text-content">
+        <h2>THERMAL MANAGEMENT</h2>
+        <h1>Radiant Heat Warmer</h1>
+        <p>
+          Easy to operate Radiant Heat Warmer is designed to deliver optimal thermal microenvironment
+          for the neonates required in the delivery room, emergency, and NICU. Infrared ceramic heater
+          elements and parabolic reflectors provide even heat distribution over the entire bed area.
+        </p>
+        <h3>Overview / Highlights</h3>
+        <ul class="highlights-list">
+          <li>✔ Smooth and Crevice-free design</li>
+          <li>✔ Ergonomic and Intuitive User Interface</li>
+          <li>✔ Thermistor-based temperature probes</li>
+          <li>✔ Optional: Motorized jerk-free height adjustment facility</li>
+          <li>✔ Multiple controlling modes</li>
+          <li>✔ Infrared Ceramic Heating Element</li>
+          <li>✔ Trendelenburg and Reverse Trendelenburg facility</li>
+          <li>✔ Optional: T-Piece Resuscitator</li>
+        </ul>
+        <div class="buttons">
+          <button>User Manual</button>
+          <button>Brochure</button>
+        </div>
+      </div>
+      <img src="../assets/images/warmer.png" alt="Radiant Heat Warmer" class="product-image">
+    </div>
+  </section>
+  
+  <section class="image-section_available-models">
+    <div class="header_available-models">Available Models</div>
+    <div class="container_available-models">
+        <div class="image-div" onclick="openModal(this)">
+            <img src="../assets/images/warmer.png" alt="Model 1">
+        </div>
+        <div class="image-div" onclick="openModal(this)">
+            <img src="../assets/images/warmer.png" alt="Model 2">
+        </div>
+        <div class="image-div" onclick="openModal(this)">
+            <img src="../assets/images/warmer.png" alt="Model 3">
+        </div>
+    </div>
+
+    <div class="modal_available-models" id="imageModal">
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+        <img id="modalImage" src="" alt="">
+    </div>
+</section>
+<div data-include="../components/footer.html"></div>
+<button id="topButton" onclick="scrollToTop()">⬆ Top</button>
+<script src="../js/script.js" defer></script>
+<script src="../js/javascript.js" defer></script>
+</body>
+</html>

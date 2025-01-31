@@ -1,0 +1,58 @@
+
+
+<!-- Preloader -->
+<div id="preloader">
+    <div class="spinner"></div>
+</div>
+
+<!-- Back to Top Button -->
+<button id="topButton" onclick="scrollToTop()">⬆ Top</button>
+
+<script>
+    // Function to dynamically load HTML components
+    function loadComponents() {
+        const includes = document.querySelectorAll("[data-include]");
+        
+        includes.forEach(async (el) => {
+            const file = el.getAttribute("data-include");
+            if (file) {
+                try {
+                    const response = await fetch(file);
+                    if (!response.ok) throw new Error(`Failed to load ${file}`);
+                    
+                    el.innerHTML = await response.text();
+                } catch (error) {
+                    console.error("Error loading component:", error);
+                    el.innerHTML = `<p style="color: red;">Error loading ${file}</p>`; // Display an error message
+                }
+            }
+        });
+    }
+
+    // Preloader: Hide after loading
+    window.addEventListener("load", function () {
+        setTimeout(() => {
+            document.getElementById("preloader").style.display = "none";
+            document.body.style.opacity = "1";
+            document.body.style.visibility = "visible";
+        }, 100);
+
+        // Load the external components
+        loadComponents();
+    });
+
+    // Show "Back to Top" button when user scrolls down
+    window.onscroll = function () {
+        let topButton = document.getElementById("topButton");
+        if (document.documentElement.scrollTop > 300) {
+            topButton.style.display = "block";
+        } else {
+            topButton.style.display = "none";
+        }
+    };
+
+    // Smooth Scroll to Top
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+</script>

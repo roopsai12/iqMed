@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="../css/home.css">
+</head>
+
+<body>
+  
+  <!-- Full-screen section with sliding backgrounds -->
+  <section class="background-slider" id="background_slider_001">
+    <!-- Left arrow -->
+    <div class="arrow left-arrow" onclick="prevImage()">&#9664;</div>
+
+    <!-- Content with floating text and "View More" button -->
+    <div class="floating-text">
+      <h2>Company Profile</h2>
+      <p>Welcome to IQ Medical Systems</p>
+      <button class="view-more" onclick="window.location.href='../pages/aboutUs.html'">View More</button>
+    </div>
+
+    <!-- Right arrow -->
+    <div class="arrow right-arrow" onclick="nextImage()">&#9654;</div>
+
+    <!-- Background images -->
+    <div class="background-images">
+      <div class="image-slide" style="background-image: url('../assets/images/hand.png');"></div>
+    </div>
+  </section>
+
+
+  <!-- ------------------story section---------------- -->
+  <section class="story-section" id="story-section_01x">
+    <!-- Left Content -->
+    <div class="story-content">
+      <!-- Heading "OUR STORY" -->
+      <div class="small-heading">OUR STORY</div>
+
+      <!-- Main Heading "IQ Medical Systems" -->
+      <div class="main-heading">IQ Medical Systems</div>
+
+      <!-- Paragraph -->
+      <div class="story-paragraph">
+        <p>
+          IQ Medical Systems is an ISO 13485 certified organization. We value highest production standards,
+          uncompromising quality of materials and component parts with attractive design. We are a globally
+          oriented enterprise aiming at satisfaction of the customer's need all over India. Our enterprises
+          have exported its products to many states across the country.
+        </p>
+        <p>
+          The product line of IQ Medical System is the result from decades of experience in neonatal care
+          equipment. It has been developed as low-cost alternative for babies who require high quality care
+          for Resuscitation, Thermal Care, hyperbilirubinemia management and Non-Invasive ventilation support.
+          We focus on patients' needs with a user-friendly system.
+        </p>
+      </div>
+
+      <!-- Buttons -->
+      <div class="buttons-container">
+        <button class="btn_view-more" onclick="window.location.href='../pages/aboutUs.html'">View More</button>
+        <button class="btn_contact-us" onclick="window.location.href='../pages/contactUs.html'">Contact Us</button>
+      </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="story-image">
+      <img src="../assets/images/infant_story.jpeg" alt="Baby Care">
+    </div>
+  </section>
+
+  <!-- ----------------------hospital section ----------------------------- -->
+
+  <section class="hospital-section" id="hospital-section_01x">
+    <div class="info-container">
+      <!-- Main Text Div -->
+      <div class="main-text">
+        <h2>Powered by over 3000 Hospitals Trust Us with</h2>
+      </div>
+
+      <!-- Stats Div -->
+      <div class="stats-container">
+        <!-- First Stat -->
+        <div class="stat-box">
+          <div class="icon">
+            <img src="../assets/images/person.png" alt="Channel Partners Icon">
+          </div>
+          <div class="stat-info">
+            <h3>90</h3>
+            <p>Channel Partners</p>
+          </div>
+        </div>
+
+        <!-- Second Stat 
+        <div class="stat-box">
+          <div class="icon">
+            <img src="../assets/images/online.png" alt="International Presence Icon">
+          </div>
+          <div class="stat-info">
+            <h3>60</h3>
+            <p>National Presence</p>
+          </div>
+        </div>-->
+
+        <!-- Third Stat -->
+        <div class="stat-box">
+          <div class="icon">
+            <img src="../assets/images/hospital-bed.png" alt="NICU Beds Icon">
+          </div>
+          <div class="stat-info">
+            <h3>36000</h3>
+            <p>NICU Beds</p>
+          </div>
+        </div>
+
+        <!-- Fourth Stat -->
+        <div class="stat-box">
+          <div class="icon">
+            <img src="../assets/images/staff.png" alt="Qualified Staff Icon">
+          </div>
+          <div class="stat-info">
+            <h3>20</h3>
+            <p>Qualified Staff</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- -----------------------------we love to care ----------------------- -->
+  <section class="we-love-to-care" id="we-love-to-care_01x">
+    <!-- First Div -->
+    <div class="centered-text">
+      <h4>We Love to Care</h4>
+    </div>
+
+    <!-- Second Div -->
+    <div class="centered-text">
+      <h2>One Stop. One Solution</h2>
+    </div>
+
+    <!-- Third Div -->
+    <div class="horizontal-div-container">
+      <!-- First Inner Div -->
+      <div class="feature-div" onclick="navigateToPage('thermal.html')">
+        <div class="icon-div">
+          <img src="../assets/images/temp.png" alt="Thermal Management Icon" />
+        </div>
+        <div class="heading-div">Thermal Management</div>
+        <div class="subtext-div">
+          Basic to advance Infant warmers, Neonatal Resuscitation units, Intensive care Infant Incubators, Transport
+          Incubators provide uniform thermal environment around baby care area. Best in class, highly reliable
+          microcontroller based thermal management system ensures 100% patient safety.
+        </div>
+      </div>
+
+      <!-- Second Inner Div
+      <div class="feature-div" onclick="navigateToPage('niv.html')">
+        <div class="icon-div">
+          <img src="../assets/images/lungs.png" alt="NIV Support Icon" />
+        </div>
+        <div class="heading-div">Smart NIV Support</div>
+        <div class="subtext-div">
+          Comprehensive Non-Invasive Ventilation Support for preterm, Infant and Pediatric patients. Excellent blending
+          of gases, Intelligent Humidification and Patient Interface provides perfect NonInvasive Ventilation like
+          Bubble CPAP and HHHFNC. Dedicated nCPAP device with various modes like CPAP, Apnea nCPAP, NIPPV, SNIPPV and
+          HFO.
+        </div>
+      </div>
+
+      <!-- Third Inner Div -->
+      <div class="feature-div" onclick="navigateToPage('jaundice.html')">
+        <div class="icon-div">
+          <img src="../assets/images/jaundice.png" alt="Jaundice Management Icon" />
+        </div>
+        <div class="heading-div">Jaundice Management</div>
+        <div class="subtext-div">
+          Excellent combination of required wavelength of High power therapeutic Blue LED and uniform distribution of
+          required dose gives faster total serum bilirubin breakdown. The finest source cooling technology to enhance
+          life of LEDs and low electrical power consumption makes it an intelligent investment for now and for tomorrow.
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ---------------review section--------------------- 
+  <section class="review-section" id="review-section_01x">
+    <div class="image-container">
+      <img src="../assets/images/619974.jpg" alt="Client Image">
+    </div>
+    <div class="content-container">
+      <div class="heading">
+        <h4>Happy Clients</h4>
+      </div>
+      <div class="sub-heading">
+        <h2>Our Customers & Clients</h2>
+      </div>
+      <div class="review-slider-container">
+        <div class="review-slider">
+          <div class="review">
+            <p>
+              I am very happy with Mr. Shailesh Bhai and the company. It has been fantastic, fabulous, and fascinating
+              relation for our tertiary neonatal ICU setup at NeoKids Children for all the important equipment's are
+              concerned esp and now with NIV tools. We wish you all the very best in caring for the tiny neonates.
+            </p>
+            <h4>Dr Ronak Patel</h4>
+            <p>Director, Consultant Neonatologist, Palanpur, Gujarat</p>
+          </div>
+          <div class="review">
+            <p>
+              The equipment delivered by this company has transformed our neonatal care unit. Their support has been
+              outstanding and the service unmatched.
+            </p>
+            <h4>Dr Sneha Sharma</h4>
+            <p>Chief Neonatologist, Mumbai</p>
+          </div>
+          <div class="review">
+            <p>
+              Exceptional service and top-notch equipment. We trust this company for all our critical equipment needs.
+              Highly recommended.
+            </p>
+            <h4>Dr Ramesh Gupta</h4>
+            <p>Senior Consultant, Chennai</p>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+        </div>
+      </div>
+    </div>
+  </section>-->
+
+  <section class="services-section">
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="../assets/images/MES.avif" alt="Medical Equipment Sales">
+                <p>Medical Equipment Sales</p>
+            </div>
+            <div class="service-item">
+                <img src="../assets/images/BM.avif" alt="Breakdown Maintenance">
+                <p>Breakdown Maintenance</p>
+            </div>
+            <div class="service-item">
+                <img src="../assets/images/Cal.avif" alt="Calibration">
+                <p>Calibration</p>
+            </div>
+            <div class="service-item">
+                <img src="../assets/images/PPM.avif" alt="Planned Preventive Maintenance">
+                <p>Planned Preventive Maintenance</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- -----------------client section --------------------------- -->
+
+  <div class="client-section" id="client-section_01x">
+    <div class="client-slider">
+
+      <div class="client"><img src="../assets/images/Clientlogos/ankura.avif" alt="ankura"></div>
+      <div class="client"><img src="../assets/images/Clientlogos/anupama hosp.png" alt="anupama"></div>
+      <div class="client"><img src="../assets/images/Clientlogos/Apollo_Hospitals_Logo.jpg" alt="Apollo"></div>
+      <div class="client"><img src="../assets/images/Clientlogos/care n cure.jpeg" alt="care"></div>
+      <div class="client"><img src="../assets/images/Clientlogos/Hope Neuro.jpg" alt="Hope"></div>
+      <div class="client"><img src="../assets/images/Clientlogos/Kamineni-Hospitals-LOGO.png" alt="Kamineni"></div>
+      <div class="client"><img src="../assets/images/Clientlogos/kims-logo-transparent.png" alt="kims"></div>
+      <div class="client"><img src="../assets/images/Clientlogos/mallareddy.jpeg" alt="mallareddy"></div>
+      <div class="client"><img src="../assets/images/client-logo1.png" alt="Client 1"></div>
+      <div class="client"><img src="../assets/images/client-logo2.png" alt="Client 2"></div>
+      <div class="client"><img src="../assets/images/client-logo3.png" alt="Client 3"></div>
+      <div class="client"><img src="../assets/images/client-logo4.png" alt="Client 4"></div>
+      <div class="client"><img src="../assets/images/client-logo5.png" alt="Client 5"></div>
+      <div class="client"><img src="../assets/images/client-logo6.png" alt="Client 6"></div>
+      <div class="client"><img src="../assets/images/client-logo7.png" alt="Client 7"></div>
+      <div class="client"><img src="../assets/images/client-logo8.png" alt="Client 8"></div>
+      <div class="client"><img src="../assets/images/Clientlogos/medicover.jpeg" alt="medicover"></div>
+      <div class="client"><img src="../assets/images/Clientlogos/prasads hosp.jpeg" alt="prasads"></div>
+      <div class="client"><img src="../assets/images/Clientlogos/rich children.png" alt="rich"></div>
+      <div class="client"><img src="../assets/images/Clientlogos/sahara hosp.jpg" alt="sahara"></div>
+      <div class="client"><img src="../assets/images/Clientlogos/sahara.jpeg" alt="sahara"></div>
+      <div class="client"><img src="../assets/images/Clientlogos/suraksha.jpeg" alt="suraksha"></div>
+      <div class="client"><img src="../assets/images/Clientlogos/viva hosp.jpeg" alt="viva"></div>
+      <div class="client"><img src="../assets/images/Clientlogos/yashoda-hospitals-logo-vector-xs.png" alt="yashoda"></div>
+      <div class="client"><img src="../assets/images/Clientlogos/zoi.jpeg" alt="zoi"></div>
+    </div>
+  </div>
+
+</body>
+<script>
+const slider = document.querySelector('.client-slider');
+const sliderContent = slider.innerHTML;
+slider.innerHTML += sliderContent;
+
+const totalWidth = slider.scrollWidth / 2;
+const duration = totalWidth / 500;
+slider.style.animationDuration = `${duration}s`;
+
+slider.addEventListener('animationiteration', () => {
+  slider.style.animation = 'none';
+  slider.offsetHeight;
+  slider.style.animation = '';
+});
+
+
+</script>
+<script>
+  function navigateToPage(pageUrl) {
+    window.location.href = pageUrl;
+  }
+</script>
+<script>
+  (function () {
+    // Get necessary DOM elements
+    const slider = document.querySelector('.review-slider');
+    const reviews = document.querySelectorAll('.review');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+
+    let currentIndex = 0; // Initial slide index
+    const totalReviews = reviews.length; // Total number of slides
+    const autoSlideInterval = 3000; // Auto-slide interval in milliseconds
+
+    // Function to update the slider's position
+    function updateSliderPosition() {
+      const offset = -currentIndex * 100; // Calculate translateX based on index
+      slider.style.transform = `translateX(${offset}%)`;
+    }
+
+    // Next slide
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalReviews; // Move to next slide (loop back to start)
+      updateSliderPosition();
+    }
+
+    // Previous slide
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalReviews) % totalReviews; // Move to previous slide (loop back to end)
+      updateSliderPosition();
+    }
+
+    // Attach event listeners to buttons
+    nextButton.addEventListener('click', nextSlide);
+    prevButton.addEventListener('click', prevSlide);
+
+    // Auto-slide every second
+    setInterval(nextSlide, autoSlideInterval);
+
+    // Initialize slider position
+    updateSliderPosition();
+  })();
+
+</script>
+
+<script>
+  let currentIndex = 0;
+  const images = document.querySelectorAll('.image-slide');
+  const totalImages = images.length;
+
+  // Function to update the background position based on the current index
+  function updateBackground() {
+    const slider = document.querySelector('.background-images');
+    // This ensures the images are transitioned correctly
+    slider.style.transform = `translateX(-${currentIndex * 33.3333}%)`;
+  }
+
+  // Function to move to the next image
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % totalImages; // Loop back to 0 after the last image
+    updateBackground();
+  }
+
+  // Function to move to the previous image
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages; // Loop back to the last image from the first
+    updateBackground();
+  }
+
+  // Auto slide the images every 2 seconds
+  setInterval(() => {
+    nextImage();
+  }, 5000); // Change background every 2 seconds
+
+  // Ensure there are no blank screens by updating the images properly
+  // Reapply transition for smoother effect
+  document.querySelector('.background-images').addEventListener('transitionend', () => {
+    if (currentIndex === 0) {
+      setTimeout(() => {
+        updateBackground();
+      }, 10); // Reset the transition after cycling back to the first image
+    }
+  });
+
+
+</script>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+<link rel="stylesheet" href="../css/products.css">
+</head>
+
+<body>
+<!-- Preloader -->
+<div id="preloader">
+    <div class="spinner"></div>
+</div>
+  <div data-include="../components/header.html"></div>
+    <section class="header_section_menu_outer" id="header_01x">
+      <div class="nav_header_section_menu_outer" style="background-color: rgb(77, 121, 109, 1);padding-top: 0.7rem;padding-bottom: 0.7rem;" >
+          <nav class="nav_section">
+              <ul class="nav-list_section">
+                  <li><a href="../index.html" class="active">Home</a></li>
+                  <li><a >Products</a></li>
+              </ul>
+          </nav>
+      </div>    
+  </section>
+
+  <section class="product-section">
+    <div class="container">
+      <div class="product-card">
+        <img src="../assets/images/warmer.png" alt="Thermal Management">
+        <h3>Thermal Management</h3>
+        <hr>
+        <button onclick="window.location.href='../pages/thermalmanagement.html'">View Product</button>
+      </div>
+  
+      <div class="product-card">
+        <img src="../assets/images/warmer.png" alt="Jaundice Management">
+        <h3>Jaundice Management</h3>
+        <hr>
+        <button onclick="window.location.href='../pages/jaundicemanagement.html'">View Product</button>
+      </div>
+  
+      <div class="product-card">
+        <img src="../assets/images/warmer.png" alt="Non-Invasive Ventilation System">
+        <h3>Non-Invasive Ventilation System</h3>
+        <hr>
+        <button onclick="window.location.href='../pages/noninvasiveventilationsystem.html'">View Product</button>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <div data-include="../components/footer.html"></div>
+  <button id="topButton" onclick="scrollToTop()">⬆ Top</button>
+  <script src="../js/script.js" defer></script>
+  <script src="../js/javascript.js" defer></script>
+  </body>
+</html>

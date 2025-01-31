@@ -1,0 +1,951 @@
+body {
+    touch-action: pan-y;
+}
+html, body {
+    overflow-x: hidden;
+}
+/* -----------------overlay-------------------------- */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overscroll-behavior-x: auto;
+}
+
+/* Dropdown Menu - Base Styles */
+.nav-list li, .nav-list_blue li {
+    position: relative;
+}
+
+.nav-list li .dropdown-menu, .nav-list_blue li .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 15rem;
+    background-color: white;
+    box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.3125rem;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Show Dropdown on Hover */
+.nav-list li:hover .dropdown-menu, .nav-list_blue li:hover .dropdown-menu {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Dropdown Menu Items */
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu li a {
+    padding: 1rem;
+    color: gray;
+    font-size: 1rem;
+    display: block;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: blue;
+    color: white;
+}
+
+/* Background Slider - Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Full-screen background section */
+/* Main Slider Container */
+.background-slider {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Default height for desktop */
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Background images container */
+.background-images {
+    position: absolute;
+    width: 300%; /* 3 images, 100% each */
+    height: 100vh; /* Default height for desktop */
+    display: flex;
+    transition: transform 1s ease-in-out; /* Smooth transition for sliding */
+}
+
+/* Individual background images */
+.image-slide {
+    width: 33.3333%; /* Ensure 3 images fit into 100% width */
+    height: 100%; /* Default height for desktop */
+    background-size: cover;
+    background-position: center;
+    transition: transform 1s ease-in-out; /* Smooth transition for sliding */
+}
+
+/* Floating text */
+.floating-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center text both vertically and horizontally */
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2; /* Ensure text appears above images */
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background to make the text more readable */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center; /* Center-align the text */
+}
+
+.floating-text h2 {
+    margin-bottom: 10px;
+}
+
+.view-more {
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+/* Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 3rem;
+    color: white;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 20px;
+}
+
+.right-arrow {
+    right: 20px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .background-slider {
+        height: 70vh; /* Reduce height to 50% of the viewport for smaller screens */
+        width: 100%;
+    }
+
+    .background-images {
+        height: 50vh; /* Ensure the images adjust to match the reduced height */
+    }
+
+    .image-slide {
+        height: 50vh; /* Ensure each individual slide matches the reduced height */
+    }
+
+    .floating-text {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+        top: 50%; /* Keep text vertically centered */
+    }
+
+    .view-more {
+        padding: 8px 16px; /* Reduce button padding for smaller screens */
+    }
+
+    .arrow {
+        font-size: 2rem; /* Scale down arrow size */
+        top: 50%; /* Keep arrows vertically aligned with the centered text */
+    }
+}
+
+@media (max-width: 480px) {
+    .background-slider {
+        height: 40vh; /* Keep the reduced height for very small screens */
+    }
+
+    .background-images {
+        height: 100vh; /* Ensure the images match the reduced height */
+    }
+
+    .image-slide {
+        height: 100vh; /* Ensure slides match the reduced height */
+    }
+
+    .floating-text {
+        font-size: 1rem; /* Further adjust font size for very small screens */
+        top: 50%; /* Maintain centered position */
+    }
+
+    .view-more {
+        padding: 6px 12px; /* Further reduce button padding */
+    }
+
+    .arrow {
+        font-size: 1.5rem; /* Reduce arrow size for very small screens */
+        top: 50%; /* Ensure vertical alignment with the text */
+    }
+}
+
+
+
+/* Section container */
+.header_section_menu_outer {
+    background-color: rgb(77, 121, 109, 1); /* Lavish blue color */
+    width: 100%; /* Full width */
+    height: 6.625rem; /* Section height */
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: flex-end; /* Align content to the right */
+    box-sizing: border-box; /* Ensure padding is included in dimensions */
+    margin-top: 5.625rem; /* Start immediately after the header */
+
+}
+
+/* Navigation container */
+.nav_header_section_menu_outer {
+    display: flex;
+    align-items: center;
+    margin-right: 3.75rem; /* 60px */
+    
+}
+
+/* Navigation list */
+.nav_section {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list_section {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation items */
+.nav-list_section li {
+    display: flex;
+    align-items: center; /* Center text and line */
+    justify-content: center;
+    padding: 0 1.875rem; /* Add padding inside each item */
+    position: relative;
+}
+
+.nav-list_section li:not(:last-child)::after {
+    content: ''; /* Vertical line */
+    position: absolute;
+    right: 0; /* Position at the right edge */
+    height: 60%; /* Adjust line height */
+    width: 0.0625rem; /* Line width (1px in rem) */
+    background-color: white; /* White line color */
+}
+
+/* Links */
+.nav-list_section li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text color */
+    font-size: 1rem; /* 16px */
+    transition: color 0.3s, text-decoration 0.3s;
+    display: flex;
+    align-items: center; /* Center text */
+    justify-content: center;
+}
+
+.nav-list_section li a:hover {
+    color: #ffd700; /* Gold color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 48rem) { /* 768px in rem */
+    .header_section_menu_outer {
+        flex-direction: row;
+        height: auto; /* Adjust height */
+        padding: 1rem; /* 16px padding */
+        margin-top: 7.625rem; /* Ensure margin remains for smaller screens */
+    }
+
+    .nav-list_section {
+        flex-direction: row;
+        gap: 1rem; /* Add spacing between items */
+    }
+
+    .nav-list_section li:not(:last-child)::after {
+        display: flex; /* Remove vertical line for mobile */
+    }
+}
+
+/* -----------------------------story section-------------------------------------- */
+/* Story Section - Base Styles */
+.story-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff no-repeat center center/cover;
+    padding: 3.75rem 1.25rem; /* 60px 20px */
+    min-height: 30vh; /* Adjusting the height to be responsive and based on the viewport height */
+    color: #333;
+    overflow: hidden;
+    width: 100%; /* Ensure the section takes up the full width */
+    box-sizing: border-box; /* Make sure padding is included in width calculation */
+}
+  
+.story-content {
+    width: 50%;
+    padding: 1.25rem; /* 20px */
+}
+  
+.small-heading {
+    font-size: 0.875rem; /* 14px */
+    font-weight: bold;
+    color: rgb(77, 121, 109, 1);
+    margin-bottom: 0.625rem; /* 10px */
+}
+  
+.main-heading {
+    font-size: 1.75rem; /* 28px */
+    font-weight: bold;
+    margin-bottom: 1.25rem; /* 20px */
+}
+  
+.story-paragraph p {
+    font-size: 1rem; /* 16px */
+    line-height: 1.6;
+    margin-bottom: 0.9375rem; /* 15px */
+}
+  
+.buttons-container {
+    display: flex;
+    gap: 1.25rem; /* 20px */
+    margin-top: 1.25rem; /* 20px */
+}
+  
+.btn_view-more {
+    padding: 0.625rem 0.625rem; /* 10px 10px */
+    font-size: 0.875rem; /* 14px */
+    border-radius: 0.3125rem; /* 5px */
+    border: 0.125rem solid rgb(77, 121, 109, 1); /* 2px */
+    cursor: pointer;
+    background: transparent;
+    color: rgb(77, 121, 109, 1);
+}
+  
+.btn_contact-us {
+    padding: 0.625rem 0.625rem; /* 10px 10px */
+    font-size: 0.875rem; /* 14px */
+    border-radius: 0.3125rem; /* 5px */
+    background: rgb(77, 121, 109, 1);
+    color: white;
+}
+  
+.story-image {
+    width: 45%;
+}
+  
+.story-image img {
+    width: 100%;
+    border-radius: 0.625rem; /* 10px */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) { /* Devices with width ≤ 768px */
+    .image-slide{
+        height: 60%;
+    }
+    .story-section {
+        flex-direction: column; /* Stack image and content vertically */
+        padding: 2rem 1rem; /* Adjust padding for smaller screens */
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .story-content {
+        width: 100%; /* Full width for content */
+        padding: 1rem; /* Adjust padding for smaller devices */
+    }
+
+    .main-heading {
+        font-size: 1.5rem; /* Slightly smaller heading */
+    }
+
+    .story-paragraph p {
+        font-size: 0.9rem; /* Smaller text */
+        line-height: 1.5; /* Adjust line spacing */
+    }
+
+    .buttons-container {
+        justify-content: center; /* Center the buttons */
+        flex-wrap: wrap; /* Allow buttons to wrap if needed */
+        gap: 1rem; /* Add spacing between buttons */
+    }
+
+    .btn_view-more, .btn_contact-us {
+        font-size: 0.8rem; /* Reduce button font size */
+        padding: 0.5rem 1rem; /* Adjust button padding */
+    }
+
+    .story-image {
+        width: 80%; /* Increase image width for smaller screens */
+        margin: 1rem auto; /* Center the image with margin */
+    }
+}
+
+/* Responsive Design for Very Small Screens (Mobile ≤ 480px) */
+@media (max-width: 480px) {
+    .story-section {
+        padding: 1.5rem 0.5rem; /* Reduce padding further for small screens */
+    }
+
+    .main-heading {
+        font-size: 1.25rem; /* Reduce heading size */
+    }
+
+    .story-paragraph p {
+        font-size: 0.8rem; /* Smaller paragraph text */
+    }
+
+    .btn_view-more, .btn_contact-us {
+        font-size: 0.75rem; /* Smaller button text */
+        padding: 0.4rem 0.8rem; /* Adjust button padding */
+    }
+
+    .story-image {
+        width: 100%; /* Full width for the image */
+    }
+}
+
+ 
+
+/* ---------------------------------hospital section--------------------------------- */
+.hospital-section {
+    background: url(../assets/images/bizz.jpg) no-repeat center center / cover;
+    position: relative;
+    height: 25rem; /* 400px */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+}
+  
+.info-container {
+    height: 1.51rem;
+    width: 85%;
+    max-width: 48.25rem;
+    padding: 1.25rem;
+    border-radius: 0;
+    margin-top: 4.5rem;
+}
+  
+.main-text h2 {
+    font-size: 1.75rem; /* 28px */
+    margin-top: 2rem; /* 50px */
+    text-align: center;
+}
+  
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+  
+.stat-box {
+    display: flex;
+    align-items: center;
+    padding: 0.625rem; /* 10px */
+    border: none;
+    text-align: center;
+    flex-direction: column-reverse;
+}
+  
+.icon img {
+    width: 2.5rem; /* 40px */
+    height: 2.5rem; /* 40px */
+}
+  
+.stat-info h3 {
+    font-size: 1.5rem; /* 24px */
+    margin: 0;
+}
+  
+.stat-info p {
+    font-size: 0.875rem; /* 14px */
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .hospital-section {
+        height: 30rem; /* Increased height for better image visibility */
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .info-container {
+        width: 100%; /* Full width for small screens */
+        margin-top: 2rem;
+    }
+
+    .main-text h2 {
+        font-size: 1.5rem; /* Adjust font size for medium screens */
+    }
+
+    .stats-container {
+        gap: 1rem; /* Add spacing between stacked items */
+    }
+
+    .stat-box {
+        padding: 0.5rem;
+    }
+
+    .icon img {
+        width: 2rem; /* Reduce icon size for mobile */
+        height: 2rem;
+    }
+
+    .stat-info h3 {
+        font-size: 1.25rem; /* Smaller stat heading size */
+    }
+
+    .stat-info p {
+        font-size: 0.8rem; /* Adjust paragraph text size */
+    }
+}
+
+@media (max-width: 480px) {
+    .hospital-section {
+        height: 18rem; /* Further increased height for mobile */
+    }
+
+    .main-text h2 {
+        font-size: 1rem; /* Further reduce font size for very small screens */
+    }
+
+    .icon img {
+        width: 1.5rem; /* Reduce icon size further for mobile */
+        height: 1.5rem;
+    }
+
+    .stat-info h3 {
+        font-size: 1rem; /* Smaller headings for mobile */
+    }
+
+    .stat-info p {
+        font-size: 0.75rem; /* Smaller paragraph text for mobile */
+    }
+}
+
+
+/* ----------------------- We Love To Care Section ------------------------ */
+.we-love-to-care {
+    background-color: rgb(85, 108 ,102,1);
+    padding: 2.5rem 1.25rem; /* 40px 20px */
+    color: white;
+    text-align: center;
+}
+
+.centered-text {
+    margin-bottom: 1.25rem; /* 20px */
+}
+
+.centered-text h4 {
+    font-size: 1.5rem; /* 24px */
+    margin: 0;
+}
+
+.centered-text h2 {
+    font-size: 2rem; /* 32px */
+    margin: 0;
+}
+
+.horizontal-div-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center-align items when wrapping */
+    gap: 1.25rem; /* Add space between items */
+    margin-top: 5rem; /* 80px */
+}
+
+.feature-div {
+    width: 100%; /* Full width by default */
+    max-width: 20%; /* Set a maximum width */
+    padding: 1rem; /* 24px */
+    border: 1px solid lightskyblue;
+    border-radius: 0.25rem; /* 4px */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.feature-div:hover {
+    transform: scale(1.05);
+    background-color: #1e685fb9;
+}
+
+.icon-div img {
+    width: 4.6875rem; /* 75px */
+    height: 4.6875rem; /* 75px */
+    margin-bottom: 0.625rem; /* 10px */
+}
+
+.heading-div {
+    font-weight: 400;
+    font-size: 0.9375rem; /* 15px */
+    line-height: 1.5625rem; /* 25px */
+    margin-bottom: 0.625rem; /* 10px */
+    letter-spacing: 0;
+    color: rgb(205, 155, 28);
+}
+
+.subtext-div {
+    font-weight: 400;
+    font-size: 0.9375rem; /* 15px */
+    line-height: 1.5625rem; /* 25px */
+    margin-bottom: 0.625rem; /* 10px */
+    letter-spacing: 0;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .feature-div {
+        max-width: 45%; /* Adjust width for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .feature-div {
+        max-width: 100%; /* Stack items vertically */
+    }
+}
+
+@media (max-width: 480px) {
+    .centered-text h4 {
+        font-size: 1.25rem; /* 20px */
+    }
+
+    .centered-text h2 {
+        font-size: 1.5rem; /* 24px */
+    }
+
+    .horizontal-div-container {
+        margin-top: 3rem; /* Adjust spacing */
+    }
+
+    .icon-div img {
+        width: 3.75rem; /* 60px */
+        height: 3.75rem; /* 60px */
+    }
+
+    .feature-div {
+        padding: 0.75rem; /* Reduce padding */
+    }
+}
+
+/* Our Services*/
+
+.services-section {
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-item {
+    max-width: 200px;
+    text-align: center;
+}
+
+.service-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50% 50% 50% 50%;
+    object-fit: cover;
+}
+
+.service-item p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-item img {
+        width: 180px;
+        height: 120px;
+        border-radius: 100px 100px 0 0;
+    }
+}
+
+
+/*<- ----------------------review section--------------------------- ->*/
+/* .review-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    color: #fff;
+    padding: 2.5rem 1.25rem;
+    gap: 1.25rem;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    margin-top: -3.75rem;
+    margin-left: 0;
+}
+
+.image-container img {
+    width: 31.5rem;
+    height: 31.25rem;
+    border-radius: 0;
+    object-fit: fill;
+}
+
+.content-container {
+    max-width: 40.75rem;
+    text-align: left;
+    background-color: rgb(77, 121, 109, 1);
+    color: white;
+    padding: 1.25rem;
+    border-radius: 0;
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    transform: translate(-10%, -50%);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.heading h4 {
+    color: #ffcc00;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.sub-heading h2 {
+    margin: 0.625rem 0 1.25rem;
+    font-size: 2rem;
+}
+
+.review-slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 18.75rem;
+}
+
+.review-slider {
+    display: flex;
+}
+
+.review {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 1.25rem;
+    text-align: left;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.625rem;
+}
+
+.slider-controls button {
+    background-color: #ffcc00;
+    border: none;
+    color: #002f6c;
+    padding: 0.625rem 0.9375rem;
+    font-size: 1.125rem;
+    cursor: pointer;
+    border-radius: 0.3125rem;
+    margin: 0 0.3125rem;
+}
+
+.slider-controls button:hover {
+    background-color: #e6b800;
+}
+
+@keyframes slide-left-to-right {
+    0% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.review-slider {
+    display: flex;
+    animation: slide-left-to-right 10s ease-in infinite;
+}
+
+@media (max-width: 768px) {
+    .review-section {
+        padding: 2rem 1rem;
+        flex-direction: column;
+    }
+
+    .image-container {
+        margin-top: 0;
+        flex: 1 1 auto;
+    }
+
+    .content-container {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        max-width: none;
+        padding: 1rem;
+        box-shadow: none;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+    }
+} */
+  
+
+/* ------------client section--------------- */
+.client-section {
+    width: 100%;
+    overflow: hidden; /* Hides the overflow for seamless scrolling */
+    background-color: white;
+    padding: 1.25rem 0; /* 20px 0 */
+    position: relative;
+    padding-bottom: 3.125rem; /* 50px */
+  }
+  
+  .client-slider {
+    display: flex;
+    gap: 2.5rem; /* 40px gap between logos */
+    animation: scroll 90s linear infinite; /* Adjust duration for scrolling speed */
+    width: max-content; /* Ensures content grows to fit all items */
+  }
+  
+  .client {
+    flex: 0 0 auto; /* Ensures all items are aligned in a row */
+    width: 9.375rem; /* 150px */
+    height: 7.5rem; /* 120px */
+    padding: 0.3125rem; /* 5px padding around each logo */
+  }
+  
+  .client img {
+    width: 100%; /* Image takes the full width of the container */
+    height: 100%; /* Image takes the full height of the container */
+    object-fit: contain; /* Keeps the image aspect ratio within the container */
+    padding: 0.3125rem; /* 5px padding for spacing within the image box */
+  }
+  
+  /* Keyframe for infinite scrolling */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  body {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in;
+}
+
+html, body {
+    overflow-x: hidden;
+    touch-action: pan-y;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0597f2;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    width: 3rem;
+    height: 3rem;
+    border: 0.5rem solid rgba(255, 255, 255, 0.6);
+    border-top: 0.5rem solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Back to Top Button */
+#topButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #0597f2;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#topButton:hover {
+    background-color: #0378c6;
+}

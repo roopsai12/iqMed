@@ -1,0 +1,365 @@
+body {
+    touch-action: pan-y;
+}
+html, body {
+    overflow-x: hidden;
+}
+body {
+    font-family: Arial, sans-serif;
+  }
+  /* Section container */
+  .header_section_menu_outer {
+      background-color: rgb(77, 121, 109, 1); /* Lavish blue color */
+      width: 100%; /* Full width */
+      height: 7.625rem; /* Section height */
+      display: flex;
+      align-items: center; /* Center items vertically */
+      justify-content: flex-end; /* Align content to the right */
+      box-sizing: border-box; /* Ensure padding is included in dimensions */
+      margin-top: 1.625rem; /* Start immediately after the header */
+  
+  }
+  
+  /* Navigation container */
+  .nav_header_section_menu_outer {
+      display: flex;
+      align-items: center;
+      margin-right: 3.75rem; /* 60px */
+      
+  }
+  
+  /* Navigation list */
+  .nav_section {
+      display: flex;
+      align-items: center;
+  }
+  
+  .nav-list_section {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  }
+  
+  /* Navigation items */
+  .nav-list_section li {
+      display: flex;
+      align-items: center; /* Center text and line */
+      justify-content: center;
+      padding: 0 1.875rem; /* Add padding inside each item */
+      position: relative;
+  }
+  
+  .nav-list_section li:not(:last-child)::after {
+      content: ''; /* Vertical line */
+      position: absolute;
+      right: 0; /* Position at the right edge */
+      height: 60%; /* Adjust line height */
+      width: 0.0625rem; /* Line width (1px in rem) */
+      background-color: white; /* White line color */
+  }
+  
+  /* Links */
+  .nav-list_section li a {
+      text-decoration: none; /* Remove underline */
+      color: white; /* White text color */
+      font-size: 1rem; /* 16px */
+      transition: color 0.3s, text-decoration 0.3s;
+      display: flex;
+      align-items: center; /* Center text */
+      justify-content: center;
+  }
+  
+  .nav-list_section li a:hover {
+      color: #ffd700; /* Gold color on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 48rem) { /* 768px in rem */
+      .header_section_menu_outer {
+          flex-direction: row;
+          height: auto; /* Adjust height */
+          padding: 1rem; /* 16px padding */
+          margin-top: 4.625rem; /* Ensure margin remains for smaller screens */
+      }
+  
+      .nav-list_section {
+          flex-direction: row;
+          gap: 1rem; /* Add spacing between items */
+      }
+  
+      .nav-list_section li:not(:last-child)::after {
+          display: flex; /* Remove vertical line for mobile */
+      }
+  }
+.section {
+    padding: 50px 15px 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+.section-title {
+    margin-bottom: 30px;
+}
+.title-header h5 {
+    color: #007bff;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 16px;
+}
+.title-header h2 {
+    font-size: 32px;
+    margin: 10px 0;
+    color: #333;
+}
+.title-desc {
+    color: #555;
+    margin-bottom: 20px;
+}
+.accordion {
+    border-top: 1px solid #ddd;
+}
+.toggle {
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+.toggle-title {
+    background: #f9f9f9;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(18, 18, 116);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle-title:hover {
+    background: #eee;
+}
+.toggle-content {
+    display: none;
+    padding: 15px;
+    color: #555;
+    background: #fff;
+}
+.toggle.active .toggle-content {
+    display: block;
+}
+.toggle-icon {
+    font-size: 16px;
+    color: #333;
+    margin-left: 10px;
+}
+.toggle.active .toggle-icon {
+    content: "-";
+}
+
+.founder-section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 15px;
+
+}
+
+.founder {
+    display: flex;
+    flex-wrap: nowrap; /* Ensures items remain on one line */
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    border-radius: 20px;
+    box-shadow: 0 1px 2px rgba(22, 19, 19, 0.384); /* Adjust shadow as needed */
+    background-color: #fff; /* Optional: Add a background color if not already set */
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative; /* Required to manage the image overflow */
+    overflow: visible; /* Allow image to overflow */
+}
+
+.founder-image {
+    flex: 0 0 40%; /* Image takes up 40% */
+    position: relative;
+    text-align: center;
+}
+
+.founder-image img {
+    width: 300px; /* Adjusted width */
+    height: 300px; /* Adjusted height */
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ddd; /* Slightly thicker border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow for prominence */
+    position: relative; /* Position relative to the .founder container */
+    top: -20%; /* Move the image 20% above its parent border */
+    transform: translateY(-30%); /* Ensures overflow to the top */
+    background-color: #fff; /* Optional: Background color to blend with parent */
+}
+
+.founder-details {
+    flex: 0 0 50%; /* Details take up 60% */
+    color: #333;
+}
+
+.founder-details h2 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    color: #007bff;
+}
+
+.founder-details h5 {
+    font-size: 18px;
+    margin: 0 0 15px;
+    font-weight: 500;
+    color: rgb(18, 18, 116);
+}
+
+.founder-details p {
+    margin: 0 0 10px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .founder {
+        flex-direction: column; /* Stack on smaller screens */
+    }
+
+    .founder-image {
+        flex: 0 0 auto; /* Allow image to resize naturally */
+    }
+
+    .founder-image img {
+        width: 150px;
+        height: 150px;
+        top: -15%; /* Adjust for smaller screen */
+    }
+
+    .founder-details {
+        flex: 0 0 auto; /* Allow details to resize naturally */
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+
+
+/* CSS file: manufacturing_styles.css */
+.manufacturing-unit {
+    padding: 30px 15px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: left;
+}
+.section-header h5 {
+    color: #007bff;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.section-header h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+.section-header .description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+.image-carousel {
+    overflow: hidden;
+    position: relative;
+    max-width: 1200px;
+    height: 300px; /* Adjust height as needed */
+    margin-top: 20px;
+
+    /* Center align */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Ensures horizontal centering */
+}
+
+.carousel-track {
+    display: flex;
+    animation: scroll 240s linear infinite;
+}
+.carousel-track img {
+    width: 300px;
+    height: 200px;
+    margin-right: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    object-fit: cover;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+body {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in;
+}
+
+html, body {
+    overflow-x: hidden;
+    touch-action: pan-y;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0597f2;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    width: 3rem;
+    height: 3rem;
+    border: 0.5rem solid rgba(255, 255, 255, 0.6);
+    border-top: 0.5rem solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Back to Top Button */
+#topButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #0597f2;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#topButton:hover {
+    background-color: #0378c6;
+}
